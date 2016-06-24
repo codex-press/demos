@@ -1,5 +1,292 @@
+@import 'https://fonts.googleapis.com/css?family=Cormorant+Unicase|Eczar|Maitree|Taviraj|Trirong';
+@import url(https://fonts.googleapis.com/css?family=Inconsolata|Amatic+SC|Architects+Daughter|Satisfy);
 
-figure {
-  width: 50%;
+body {
+  color: 13051E;
+  background: #ffff;
+  font-family: "Maitree";
 }
 
+.italic{
+	font-style: italic;
+	line-height: .5em;
+	text-indent: 3em;
+	font-family: "Comorant Unicase";
+	font-size: 1em;
+}
+
+.dropcap {
+  float: left;
+  display: inline-block;
+  height: .7em;
+  line-height: .9;
+  font-size: 6em;
+  padding-right: 0.05em;
+  font-family: "Taviraj";
+}
+p {
+  max-width: 600;
+  width: calc(100% - 2em);
+  margin: auto;
+  padding-bottom: 1em;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Taviraj";
+}
+h2 {
+  font-family: "Taviraj";
+  text-align: center;
+  font-size: 1em;
+  font-weight: thin;
+  line-height: 1em;
+}
+.chapter-number {
+  text-align: center;
+  font-family: "Taviraj";
+  font-size: 5em;
+  margin-bottom: .5em;
+}
+.chapter-name {
+  font-family: "Taviraj";
+  text-align: center;
+  font-size: 2em;
+  margin-top: .02em;
+}
+
+.downtree {
+	text-align: center;
+	font-family: "Cormorant";
+	font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {
+  .downtree {
+	font-size: 0.5em;
+  }
+}
+
+.downtop {
+	font-size: 9em;
+}
+
+.downmiddle {
+	font-size: 5em;
+	opacity: 0.9;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+   .downmiddle:hover {
+      opacity: 0.3;
+      }
+
+.downbottom {
+	font-size: 3em;
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+   .downbottom:hover {
+      opacity: 0;
+      }
+
+
+.stars{
+	text-align: center;
+	font-size: 1em;
+	line-height: .5em;
+	letter-spacing: .5em;
+}
+
+
+.tail  {
+  color: #13051E;
+  line-height: 1;
+  font-family: Satisfy;
+  font-size: 3em;
+
+  p {
+    padding-bottom: 0;
+    white-space: nowrap;
+  }
+
+  p:nth-child(1) { font-size: 1em; }
+  p:nth-child(2) { font-size: .995em; }
+  p:nth-child(3) { font-size: .980em; }
+  p:nth-child(4) { font-size: .965em; }
+  p:nth-child(5) { font-size: .950em; }
+  p:nth-child(6) { font-size: .935em; }
+  p:nth-child(7) { font-size: .920em; }
+  p:nth-child(8) { font-size: .895em; }
+  p:nth-child(9) { font-size: .880em; }
+  p:nth-child(10) { font-size: .865em; }
+  p:nth-child(11) { font-size: .850em; }
+  p:nth-child(12) { font-size: .830em; }
+  p:nth-child(13) { font-size: .825em; }
+  p:nth-child(14) { font-size: .810em; }
+  p:nth-child(15) { font-size: .795em; }
+
+  /*nothing*/
+  p:nth-child(16) { font-size: .780em; }
+  p:nth-child(17) { font-size: .765em; }
+
+  /*said the*/
+  p:nth-child(18) { font-size: .750em; }
+  p:nth-child(19) { font-size: .735em; }
+  p:nth-child(20) { font-size: .720em; }
+  p:nth-child(21) { font-size: .705em; }
+  p:nth-child(22) { font-size: .690em; }
+  p:nth-child(23) { font-size: .675em; }
+  p:nth-child(24) { font-size: .650em; }
+  p:nth-child(25) { font-size: .635em; }
+  p:nth-child(26) { font-size: .620em; }
+  p:nth-child(27) { font-size: .605em; }
+  p:nth-child(28) { font-size: .590em; }
+  p:nth-child(29) { font-size: .575em; }
+  p:nth-child(30) { font-size: .550em; }
+  p:nth-child(31) { font-size: .540em; }
+  p:nth-child(32) { font-size: .530em; }
+  p:nth-child(33) { font-size: .525em; }
+  p:nth-child(34) { font-size: .520em; }
+  p:nth-child(35) { font-size: .515em; }
+  p:nth-child(36) { font-size: .510em; }
+  p:nth-child(37) { font-size: .505em; }
+  p:nth-child(38) { font-size: .500em; }
+  p:nth-child(39) { font-size: .490em; }
+  p:nth-child(40) { font-size: .480em; }
+  p:nth-child(41) { font-size: .470em; }
+  p:nth-child(42) { font-size: .460em; }
+  p:nth-child(43) { font-size: .450em; }
+  p:nth-child(44) { font-size: .440em; }
+  p:nth-child(45) { font-size: .440em; }
+  p:nth-child(46) { font-size: .430em; }
+  p:nth-child(47) { font-size: .420em; }
+  p:nth-child(48) { font-size: .410em; }
+  p:nth-child(49) { font-size: .405em; }
+  p:nth-child(50) { font-size: .390em; }
+  p:nth-child(51) { font-size: 2.4em; }
+
+}
+
+@media (max-width: 400px) {
+  .tail  {
+    font-size: 2.2em;
+
+    p:nth-child(1) { margin-left: 1em; }
+    p:nth-child(2) { margin-left: 1.4em; }
+    p:nth-child(3) { margin-left: 1.8em; }
+    p:nth-child(4) { margin-left: 2.2em; }
+    p:nth-child(5) { margin-left: 2.6em; }
+    p:nth-child(6) { margin-left: 8.2em; }
+    p:nth-child(7) { margin-left: 7em; }
+    p:nth-child(8) { margin-left: 7.6em; }
+    p:nth-child(9) { margin-left: 8.2em; }
+    p:nth-child(10) { margin-left: 9em; }
+    p:nth-child(11) { margin-left: 9em; }
+    p:nth-child(12) { margin-left: 8.4em; }
+    p:nth-child(13) { margin-left: 9.6em; }
+    p:nth-child(14) { margin-left: 9.2em; }
+    p:nth-child(15) { margin-left: 7em; }
+    /*nothing*/
+    p:nth-child(16) { margin-left: 5em; }
+    p:nth-child(17) { margin-left: 3.3em; }
+    /*said the*/
+    p:nth-child(18) { margin-left: 2.5em; }
+    p:nth-child(19) { margin-left: 1.3em; }
+    p:nth-child(20) { margin-left: -.0em; }
+    p:nth-child(21) { margin-left: -.9em; }
+    p:nth-child(22) { margin-left: -2em; }
+    p:nth-child(23) { margin-left: -2.5em; }
+    p:nth-child(24) { margin-left: -3em; }
+    p:nth-child(25) { margin-left: -2em; }
+    p:nth-child(26) { margin-left: .25em; }
+    p:nth-child(27) { margin-left: 2.2em; }
+    p:nth-child(28) { margin-left: 3em; }
+    p:nth-child(29) { margin-left: 4em; }
+    p:nth-child(30) { margin-left: 3.1em; }
+    p:nth-child(31) { margin-left: 4em; }
+    p:nth-child(32) { margin-left: 2.5em; }
+    p:nth-child(33) { margin-left: 0.6em; }
+    p:nth-child(34) { margin-left: -1em; }
+    p:nth-child(35) { margin-left: -2.7em; }
+    p:nth-child(36) { margin-left: -3.8em; }
+    p:nth-child(37) { margin-left: -3.2em; }
+    p:nth-child(38) { margin-left: -1.6em; }
+    p:nth-child(39) { margin-left: -1em; }
+    p:nth-child(40) { margin-left: 0.6em; }
+    p:nth-child(41) { margin-left: 2.2em; }
+    p:nth-child(42) { margin-left: 4em; }
+    p:nth-child(43) { margin-left: 6em; }
+    p:nth-child(44) { margin-left: 8.4em; }
+    p:nth-child(45) { margin-left: 9em; }
+    p:nth-child(46) { margin-left: 8.2em; }
+    p:nth-child(47) { margin-left: 7em; }
+    p:nth-child(48) { margin-left: 5em; }
+    p:nth-child(49) { margin-left: 3.3em; }
+    p:nth-child(50) { margin-left: 2.5em; }
+    p:nth-child(51) { margin-left: .4em; }
+  }
+}
+
+@media (min-width: 400px) {
+  .tail  {
+    p:nth-child(1) { margin-left: 4em; }
+    p:nth-child(2) { margin-left: 7.6em; }
+    p:nth-child(3) { margin-left: 8.2em; }
+    p:nth-child(4) { margin-left: 7em; }
+    p:nth-child(5) { margin-left: 7.6em; }
+    p:nth-child(6) { margin-left: 8.2em; }
+    p:nth-child(7) { margin-left: 7em; }
+    p:nth-child(8) { margin-left: 7.6em; }
+    p:nth-child(9) { margin-left: 8.2em; }
+    p:nth-child(10) { margin-left: 9em; }
+    p:nth-child(11) { margin-left: 9em; }
+    p:nth-child(12) { margin-left: 8.4em; }
+    p:nth-child(13) { margin-left: 9.6em; }
+    p:nth-child(14) { margin-left: 9.2em; }
+    p:nth-child(15) { margin-left: 7em; }
+    /*nothing*/
+    p:nth-child(16) { margin-left: 5em; }
+    p:nth-child(17) { margin-left: 3.3em; }
+    /*said the*/
+    p:nth-child(18) { margin-left: 2.5em; }
+    p:nth-child(19) { margin-left: 1.3em; }
+    p:nth-child(20) { margin-left: -.0em; }
+    p:nth-child(21) { margin-left: -.9em; }
+    p:nth-child(22) { margin-left: -2em; }
+    p:nth-child(23) { margin-left: -2.5em; }
+    p:nth-child(24) { margin-left: -3em; }
+    p:nth-child(25) { margin-left: -2em; }
+    p:nth-child(26) { margin-left: .25em; }
+    p:nth-child(27) { margin-left: 2.2em; }
+    p:nth-child(28) { margin-left: 3em; }
+    p:nth-child(29) { margin-left: 4em; }
+    p:nth-child(30) { margin-left: 3.1em; }
+    p:nth-child(31) { margin-left: 4em; }
+    p:nth-child(32) { margin-left: 2.5em; }
+    p:nth-child(33) { margin-left: 0.6em; }
+    p:nth-child(34) { margin-left: -1em; }
+    p:nth-child(35) { margin-left: -2.7em; }
+    p:nth-child(36) { margin-left: -3.8em; }
+    p:nth-child(37) { margin-left: -3.2em; }
+    p:nth-child(38) { margin-left: -1.6em; }
+    p:nth-child(39) { margin-left: -1em; }
+    p:nth-child(40) { margin-left: 0.6em; }
+    p:nth-child(41) { margin-left: 2.2em; }
+    p:nth-child(42) { margin-left: 4em; }
+    p:nth-child(43) { margin-left: 6em; }
+    p:nth-child(44) { margin-left: 8.4em; }
+    p:nth-child(45) { margin-left: 9em; }
+    p:nth-child(46) { margin-left: 8.2em; }
+    p:nth-child(47) { margin-left: 7em; }
+    p:nth-child(48) { margin-left: 5em; }
+    p:nth-child(49) { margin-left: 3.3em; }
+    p:nth-child(50) { margin-left: 2.5em; }
+    p:nth-child(51) { margin-left: .4em; }
+  }
+}
