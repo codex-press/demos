@@ -1,5 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Cormorant+Unicase|Eczar|Maitree|Taviraj|Trirong';
-@import url(https://fonts.googleapis.com/css?family=Inconsolata|Amatic+SC|Architects+Daughter|Satisfy); @import 'https://fonts.googleapis.com/css?family=Dancing+Script|Merienda+One|Mr+Dafoe|Rye|Vast+Shadow';
+@import url(https://fonts.googleapis.com/css?family=Inconsolata|Amatic+SC|Architects+Daughter|Satisfy);
+
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script|Fredericka+the+Great|Merienda+One|Mr+Dafoe|Parisienne|Rye|Vast+Shadow';
+
 body {
   color: 13051E;
   background: #ffff;
@@ -66,52 +69,60 @@ h2 {
       letter-spacing: .02em;
     }
 
-
-
-
-
 article.chapter-one {
-
-  .downtree {
-  	text-align: center;
-  	font-family: "Cormorant";
-  	font-weight: bolder;
-  }
-
-  @media only screen and (max-width: 600px) {
+      .drink-me{
+      font-size: 1.8em;
+      font-family: "Dancing Script";
+      vertical-align: sub;
+      line-height: 0;
+      }
+      .eat-me{
+      font-size: 1.8em;
+      font-family: "Architects Daughter";
+      vertical-align: sub;
+      line-height: 0;
+       }
     .downtree {
-  	font-size: 0.5em;
+    	text-align: center;
+    	font-family: "Cormorant";
+    	font-weight: bolder;
     }
-  }
 
-  .downtop {
-  	font-size: 9em;
-  }
+    @media only screen and (max-width: 600px) {
+      .downtree {
+    	font-size: 0.5em;
+      }
+    }
 
-  .downmiddle {
-  	font-size: 5em;
-  	opacity: 0.9;
-     transition: opacity .25s ease-in-out;
-     -moz-transition: opacity .25s ease-in-out;
-     -webkit-transition: opacity .25s ease-in-out;
-     }
+    .downtop {
+    	font-size: 9em;
+    }
 
-     .downmiddle:hover {
-        opacity: 0.3;
-        }
+    .downmiddle {
+    	font-size: 5em;
+    	opacity: 0.9;
+       transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+       }
 
-  .downbottom {
-  	font-size: 3em;
-  	opacity: 1;
-  	transition: opacity .25s ease-in-out;
-     -moz-transition: opacity .25s ease-in-out;
-     -webkit-transition: opacity .25s ease-in-out;
-     }
+       .downmiddle:hover {
+          opacity: 0.3;
+          }
 
-     .downbottom:hover {
-        opacity: 0;
-        }
+    .downbottom {
+    	font-size: 3em;
+    	opacity: 1;
+    	transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+       }
+
+       .downbottom:hover {
+          opacity: 0;
+          }
 }
+
 article.chapter-two {
 }
 article.chapter-three {
@@ -273,7 +284,10 @@ article.chapter-four   {
   }
 }
 article.chapter-five   {
+  .alice-song :nth-child(4n){
+    margin-bottom:1.5em;
     }
+  }
 
 article.chapter-six    {
   .chorous{
@@ -291,14 +305,38 @@ article.chapter-six    {
   }
 }
 article.chapter-seven  {
-
-.hatter-song{
-  font-size: 1.8em;
-  font-family: "Mr Dafoe";
-  }
+  .hatter-song{
+    font-size: 1.8em;
+    font-family: "Dancing Script";
+    }
 }
 article.chapter-eight  {}
 article.chapter-nine   {}
-article.chapter-ten    {}
-article.chapter-eleven {}
-article.chapter-twelve {}
+article.chapter-ten {
+  .turtle-song {
+    font-family: "Trirong";
+    line-height:1.2;
+    font-size: .8em;
+    padding-left: 2em;
+  }
+}
+article.chapter-eleven{
+      .queen-poem {
+        color:red;
+      font-family: "Vast Shadow";
+    }
+    .queen-poem:nth-child(even){
+      padding-left:3em;
+    }
+}
+article.chapter-twelve { 
+    .white-rabbit-poem{
+      font-family: "Architects Daughter";
+      line-height:.5;
+      padding-left: 2em;
+    }
+    .white-rabbit-poem p:nth-child(2n){
+      padding-bottom: 2em;
+    }
+
+}
