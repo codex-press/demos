@@ -1,6 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Cormorant+Unicase|Eczar|Maitree|Taviraj|Trirong';
 @import url(https://fonts.googleapis.com/css?family=Inconsolata|Amatic+SC|Architects+Daughter|Satisfy);
-
 @import 'https://fonts.googleapis.com/css?family=Dancing+Script|Fredericka+the+Great|Merienda+One|Mr+Dafoe|Parisienne|Rye|Vast+Shadow';
 
 body {
@@ -26,17 +25,20 @@ body {
   padding-right: 0.05em;
   font-family: "Taviraj";
 }
+
 p {
   max-width: 600px;
   width: calc(100% - 2em);
   margin: auto;
   padding-bottom: 1em;
 }
+
 h1 {
   text-align: center;
   font-size: 2em;
   font-family: "Taviraj";
 }
+
 h2 {
   font-family: "Taviraj";
   text-align: center;
@@ -44,32 +46,41 @@ h2 {
   font-weight: thin;
   line-height: 1em;
 }
-.chapter-number {
+
+h3.chapter-number {
   text-align: center;
   font-family: "Taviraj";
   font-size: 5em;
   margin-bottom: .5em;
 }
-.chapter-name {
+h3.chapter-name {
   font-family: "Taviraj";
   text-align: center;
   font-size: 2em;
   margin-top: .02em;
 }
-.stars{
+
+.stars {
   text-align: center;
   font-size: 1em;
   line-height: .5em;
   letter-spacing: .5em;
 }
-    .alice-song {
-      font-family: "Eczar";
-      line-height: .8;
-      text-align: center;
-      letter-spacing: .02em;
-    }
+
+.alice-song {
+  font-family: "Eczar";
+  line-height: .8;
+  text-align: center;
+  letter-spacing: .02em;
+}
 
 article.chapter-one {
+      .rabbit-illustration{
+
+      }
+      .drink-me-illustration{
+
+      }
       .drink-me{
       font-size: 1.8em;
       font-family: "Dancing Script";
@@ -82,25 +93,22 @@ article.chapter-one {
       vertical-align: sub;
       line-height: 0;
        }
-    .downtree {
-    	text-align: center;
-    	font-family: "Cormorant";
-    	font-weight: bolder;
-    }
-
-    @media only screen and (max-width: 600px) {
       .downtree {
-    	font-size: 0.5em;
+      	text-align: center;
+      	font-family: "Cormorant";
+      	font-weight: bolder;
       }
-    }
-
-    .downtop {
+        @media only screen and (max-width: 600px) {
+        .downtree {
+        font-size: 0.5em;
+        }}
+      .downtop {
     	font-size: 9em;
-    }
+        }
 
-    .downmiddle {
-    	font-size: 5em;
-    	opacity: 0.9;
+        .downmiddle {
+    	 font-size: 5em;
+    	 opacity: 0.9;
        transition: opacity .25s ease-in-out;
        -moz-transition: opacity .25s ease-in-out;
        -webkit-transition: opacity .25s ease-in-out;
@@ -109,20 +117,18 @@ article.chapter-one {
        .downmiddle:hover {
           opacity: 0.3;
           }
+      .downbottom {
+      	font-size: 3em;
+      	opacity: 1;
+      	transition: opacity .25s ease-in-out;
+         -moz-transition: opacity .25s ease-in-out;
+         -webkit-transition: opacity .25s ease-in-out;
+         }
 
-    .downbottom {
-    	font-size: 3em;
-    	opacity: 1;
-    	transition: opacity .25s ease-in-out;
-       -moz-transition: opacity .25s ease-in-out;
-       -webkit-transition: opacity .25s ease-in-out;
-       }
-
-       .downbottom:hover {
-          opacity: 0;
-          }
+         .downbottom:hover {
+            opacity: 0;
+            }
 }
-
 article.chapter-two {
 }
 article.chapter-three {
@@ -274,20 +280,21 @@ article.chapter-four   {
     font-family: "Dancing Script";
     vertical-align: sub;
     line-height: 0;
-  }
-  .wrabbit{
-    font-size: 1.8em;
-    font-family: "Rye";
-    white-space: nowrap;
-    vertical-align: sub;
-    line-height: 0;
-  }
+    }
+    .wrabbit{
+      font-size: 1.8em;
+      font-family: "Rye";
+      white-space: nowrap;
+      vertical-align: sub;
+      line-height: 0;
+    }
 }
+
 article.chapter-five   {
   .alice-song :nth-child(4n){
     margin-bottom:1.5em;
     }
-  }
+}
 
 article.chapter-six    {
   .chorous{
@@ -324,23 +331,22 @@ article.chapter-eleven{
       .queen-poem {
         color:red;
       font-family: "Vast Shadow";
-    }
-    .queen-poem:nth-child(even){
-      padding-left:3em;
-    }
+      }
+      .queen-poem:nth-child(even){
+        padding-left:3em;
+      }
 }
 article.chapter-twelve { 
-        .the-end{
-      font-family: "Merienda One";
-      font-size:3em;
-    }
-    .white-rabbit-poem{
-      font-family: "Architects Daughter";
-      line-height:.5;
-      padding-left: 2em;
-    }
-    .white-rabbit-poem p:nth-child(2n){
-      padding-bottom: 2em;
-    }
-
+  .the-end{
+   font-family: "Merienda One";
+   font-size:3em;
+   }
+      .white-rabbit-poem{
+        font-family: "Architects Daughter";
+        line-height:.5;
+        padding-left: 2em;
+      }
+      .white-rabbit-poem p:nth-child(2n){
+        padding-bottom: 2em;
+      }
 }
