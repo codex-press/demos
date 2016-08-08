@@ -3,53 +3,59 @@
 
   var dom = require('dom').default;
   var log = require('log').default;
+  var article = require('article').default;
 
-  dom('.signup-form').bind('submit', function(e) {
-    e.preventDefault();
+  article.once('ready', function() {
 
-    if (!emailValid()) {
+    dom('.signup-form').bind('submit', function(e) {
+      e.preventDefault();
+
+      if (!emailValid()) {
+        return false;
+      }
+
+      dom('button.submit').css({pointerEvents: 'none'});
+      dom('.signup').css({opacity: 0});
+
+      fetch('/signup', {
+        method: 'POST',
+        body: new FormData(dom('form.signup-form'))
+      })
+      .then(function(response) {
+        if (response.status >= 200 && response.status < 300) {
+            dom('.thanks').css({display: 'block'});
+            dom('.form').css({display: 'none'});
+            dom('.signup').css({opacity: 1});
+        }
+        else {
+          log(response);
+          throw('signup error');
+        }
+      })
+      .catch(function(response) {
+        dom('button.submit').css({pointerEvents: ''});
+
+        if (response &&
+          response.responseJSON &&
+          response.responseJSON.messages) {
+            dom('.error').text(response.responseJSON.messages.join('. '))
+        }
+
+        dom('.error').css({display: block});
+        dom('.signup').css({opacity: 1});
+      });
+
       return false;
-    }
-
-    dom('button.submit').css({pointerEvents: 'none'});
-    dom('.signup').css({opacity: 0});
-
-    fetch('/signup', {
-      method: 'POST',
-      body: new FormData($('form.signup-form'))
-    })
-    .then(function(response) {
-      if (response.status >= 200 && response.status < 300) {
-          dom('.thanks').css({display: 'block'});
-          dom('.form').css({display: 'none'});
-          dom('.signup').css({opacity: 1});
-      }
-      else {
-        log(response);
-        throw('signup error');
-      }
-    })
-    .catch(function(response) {
-      dom('button.submit').css({pointerEvents: ''});
-
-      if (response &&
-        response.responseJSON &&
-        response.responseJSON.messages) {
-          dom('.error').text(response.responseJSON.messages.join('. '))
-      }
-
-      dom('.error').css({display: block});
-      dom('.signup').css({opacity: 1});
     });
-
-    return false;
   });
 
 
   function emailValid(e) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (re.test($('input.email').value)) {
+    var input = dom.find(document, 'input.email')
+
+    if (re.test(input.value)) {
       // take off the invalid state
       if (dom('input.email').is('.invalid')) {
         dom('input.email').removeClass('invalid');
@@ -62,7 +68,6 @@
       dom('input.email').addClass('invalid');
       dom('.email-error').css({visibility: 'visible'});
       
-      var input = dom.find(document, 'input.email')
       
       input.focus();
 
