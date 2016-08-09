@@ -1,9 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Architects+Daughter|Cormorant|Cormorant+Unicase|Dancing+Script|Eczar|Merienda+One|Raleway|Rye|Satisfy|Vast+Shadow';
+@import 'https://fonts.googleapis.com/css?family=Trirong|Architects+Daughter|Cormorant|Cormorant+Unicase|Dancing+Script|Eczar|Merienda+One|Raleway|Rye|Satisfy|Vast+Shadow';
 
 @decor: "catseye", "fairy-tale-jf", sans-serif;
 @sans: "stevie-sans", Helvetica, Arial, sans-serif; 
 @serif: "adobe-text-pro", "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
-
 
 @media (max-width: 1129px) {
   html {
@@ -20,7 +19,7 @@
 
 body {
   color: #002;
-  background: #fff;
+  background: #fffaef;
   font-family: "ff-more-web-pro", @serif;
   line-height: 1.6; 
 }
@@ -84,9 +83,29 @@ p {
 @import 'alice/toc.less';
 
 @import 'alice/1.less';
+ 
+/* images figure  */
 
 
 article.chapter-two {
+  .esq p { 
+    padding-bottom: 1px;
+    margin-left: 10%;
+  }
+  .esq {
+    margin-left: 10%;
+    font-size: 2em;
+    line-height: ;
+    font-family: "Rye";
+  }
+
+  .couplets-alice {
+    font-style: italic;
+    line-height: .5em;
+    text-indent: 3em;
+    font-family: "Comorant Unicase";
+    font-size: 1em;
+  }
 }
 
 @import 'alice/3.less';
@@ -134,13 +153,15 @@ article.chapter-ten {
   .turtle-song {
     font-family: "Trirong";
     line-height:1.2;
-    font-size: .8em;
+    letter-spacing:  .01em ; 
+    font-size: .9em;
     padding-left: 2em;
   }
 }
 
 article.chapter-eleven {
   .queen-poem {
+    transform: scale(.9,1);
     color:red;
     font-family: "Vast Shadow";
   }
@@ -152,8 +173,10 @@ article.chapter-eleven {
 
 article.chapter-twelve { 
   .the-end {
-    font-family: "Merienda One";
+    font-family: "fairy-tale-jf";
     font-size:3em;
+    text-align: center;
+    margin: 2em auto;
     }
     .white-rabbit-poem{
     font-family: "Architects Daughter";
@@ -166,11 +189,5 @@ article.chapter-twelve {
 }
 
 /* unscrew 
-.italic {
-	font-style: italic;
-	line-height: .5em;
-	text-indent: 3em;
-	font-family: "Comorant Unicase";
-	font-size: 1em;
-}
+
 */
