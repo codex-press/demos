@@ -1,5 +1,5 @@
-import app    from 'app';
-import Plugin from 'plugin';
+var app = require('app');
+var Plugin = require('plugin');
 
 app.register('.sticky', Sticky);
              
