@@ -7,7 +7,7 @@ article.chapter-three {
     max-width: 600px;
     width: calc(100% - 2em);
     margin: auto;
-
+  
     p {
       padding-bottom: 0;
       white-space: nowrap;
@@ -124,16 +124,18 @@ article.chapter-three {
       p:nth-child(51) { margin-left: (@power * 1.15em); }
   }
 
+
   // mobile version
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     .tail  {
       font-size: 2.2em;
-      .swoosh(0.5);
+      .swoosh(0.7);
+      margin-left: 8%;
     }
   }
 
   // desktop version
-  @media (min-width: 400px) {
+  @media (min-width: 600px) {
     .tail  {
       font-size: 3em;
       .swoosh(1);
