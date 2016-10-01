@@ -17,6 +17,7 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
     this.bind({scroll: 'scroll'});
 
     let top = this.rect().top;
+    console.log(this.rect().top);
     let z = 0;
     this.levels = this.children().reduce((levels, el) => {
       let rect = dom(el).rect();
