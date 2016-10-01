@@ -14,10 +14,17 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
 
   constructor(args) {
     super(args);
-    this.bind({scroll: 'scroll'});
+    this.bind({
+      scroll: 'scroll',
+      resize: 'resize',
+    });
 
+    setTimeout(() => this.resize());
+  }
+
+  resize() {
     let top = this.rect().top;
-    console.log(this.rect().top);
+    console.log({top});
     let z = 0;
     this.levels = this.children().reduce((levels, el) => {
       let rect = dom(el).rect();
@@ -33,6 +40,10 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
 
 
   scroll(rect) {
+
+    if (!this.levels)
+      this.resize();
+
     let perspective = Math.round(-rect.top + window.innerHeight * .7);
     this.css({perspectiveOrigin: `center ${perspective}px`});
 
