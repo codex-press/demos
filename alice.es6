@@ -26,7 +26,6 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
     this.children().mapW(c => c.setTransform({}));
 
     let top = this.rect().top;
-    console.log({top});
     let z = 0;
     this.levels = this.children().reduce((levels, el) => {
 
