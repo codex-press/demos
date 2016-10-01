@@ -19,8 +19,9 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
       resize: 'resize',
     });
 
-    setTimeout(() => this.resize());
+    // setTimeout(() => this.resize());
   }
+
 
   resize() {
     let top = this.rect().top;
