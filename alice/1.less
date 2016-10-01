@@ -1,26 +1,56 @@
+
+
 article.chapter-one {
 
-  .rabbit-illustration {
-    shape-outside: padding-box polygon(47% 0%, 100% 0%, 100% 100%, 
-    6% 100%, 3% 91%, 2% 69%, 0% 50%, 5% 46%, 2% 43%, 3% 33%, 
-    4% 29%, 14% 25%, 23% 26%, 22% 21%, 27% 13%, 38% 11%);
-    shape-margin: .4em;
-    float: right;
-    z-index: -1;
-    position: relative;
-    margin-left: 40%;
+  p.drop-cap-container {
+    padding: 0;
   }
 
-  .long-neck-illustration {
+  figure.rabbit {
+    shape-outside: padding-box polygon(47% 0%, 100% 0%, 100% 100%, 
+      6% 100%, 3% 91%, 2% 69%, 0% 50%, 5% 46%, 2% 43%, 3% 33%, 
+      4% 29%, 14% 25%, 23% 26%, 22% 21%, 27% 13%, 38% 11%);
+    shape-margin: .4em;
+    z-index: -1;
+  }
+
+  figure,
+  figcaption {
+    float: right;
+    clear: right;
+    width: 40%;
+    position: relative;
+    z-index: -1;
+  }
+
+  @media (max-width: 500px) {
+    figure,
+    figcaption {
+      width: 100%;
+    }
+    figcaption {
+      float: none;
+    }
+  }
+
+  .rabbit-hole {
+    clear: both;
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+  }
+
+  .down {
+    font-size: 2em;
+    margin: 3em auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  figure.long-neck {
     shape-outside: padding-box polygon(100% 0%, 100% 100%, 
       80% 100%, 4% 98%,2% 78%, 6% 50%, 28% 41%, 16% 39%, 
       21% 36%, 37% 35%, 33% 30%, 50% 28%,52% 24%, 32% 20%, 
       28% 13%, 54% 0%);
-//    shape-margin: .4em;
-    float: right;
-    z-index: -1;
-    position: relative;
-    margin-right: 10%;
   }
 
   .drink-me {
