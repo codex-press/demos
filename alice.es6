@@ -18,30 +18,36 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
       scroll: 'scroll',
       resize: 'resize',
     });
-
-    // setTimeout(() => this.resize());
   }
 
 
   resize() {
+    // reset children
+    this.children().mapW(c => c.setTransform({}));
+
     let top = this.rect().top;
     console.log({top});
     let z = 0;
     this.levels = this.children().reduce((levels, el) => {
+
+      // Save offset from parent
       let rect = dom(el).rect();
       if (dom(el).is('.level'))
         levels.push({z: -z, top: rect.top - top, bottom: rect.bottom - top});
 
+      // set forward in Z space
       dom(el).setTransform({z});
       z -= fall;
       return levels;
     },[]);
-
   }
 
 
   scroll(rect) {
 
+    // first time scroll is called, it measures the children. Would like to
+    // do it on load but sometimes the positioning of this gets fucked up
+    // based on things that change size above it or styles that come in.
     if (!this.levels)
       this.resize();
 
