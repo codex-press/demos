@@ -23,6 +23,7 @@
 }
 
 
+ 
 body {
   color: #002;
   background: #fffaef;
@@ -47,6 +48,8 @@ p {
   margin: auto;
   padding-bottom: 1em;
 }
+
+
 
 .drop-cap {
   float: left;
@@ -87,12 +90,39 @@ p {
   letter-spacing: .02em;
 }
 
+/* figure fit in view port */
+.fitinvp {
+  margin: auto;
+  max-width: 100vw;
+  height:auto;
+  width:auto;
+  max-height:100vh;
+}
+
 figcaption {
   font-family: 'Bad Script', 'Kalam', cursive;
   font-size: 1.5em;
   line-height: 1.2;
   color: grey;
-  margin: .2em auto;
+  margin: .2em .5em;
+}
+
+.float-right {
+  float: right;
+  clear: right;
+}
+
+.float-left {
+  float: left;
+  clear: left;
+}
+
+@media (max-width: 600px) {
+  .float-right,
+  .float-left {
+    float: none;
+    clear: both;
+  }
 }
 
 @import 'alice/toc.less';
@@ -139,7 +169,15 @@ article.chapter-four {
     vertical-align: sub;
     line-height: 0;
   }
-
+  .bill-illustration {
+    float: left;
+    top: 2em;
+    marigin: 1em auto;
+  }
+  bill-text {
+    overflow: scroll;
+    padding-left: 10em;
+  }
 }
 
 article.chapter-five { 
@@ -211,6 +249,4 @@ article.chapter-twelve {
     }
 }
 
-/* unscrew 
 
-*/
