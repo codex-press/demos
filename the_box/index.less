@@ -1,0 +1,53 @@
+
+h1 {
+  text-align: center;
+}
+
+.start {
+  margin: -1rem;
+  background: #111;
+  color: #eee;
+  padding: 8em 0;
+}
+
+.wrapper {
+  position: relative;;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+svg.gaza {
+  display: block;
+  width: 100%;
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.text p.first {
+  margin-top: 3em;
+}
+
+
+.shape-left,
+.shape-right {
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+.shape-left {
+  float: left;
+  shape-outside: polygon(66% 0, 66% 20%, 60% 61%, 66% 100%, 0 100%, 0 0);
+}
+
+.shape-right {
+  float: right;
+  shape-outside: polygon(0 0, 0 .8%, 87% 2%, 84% 10%, 50% 100%, 100% 100%, 100% 0)
+}
+
