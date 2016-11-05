@@ -1,16 +1,28 @@
 
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Khand|Oxygen:400,700');
+
+body {
+  font-family: 'Oxygen', sans-serif;  
+  padding-bottom: 0;
+}
+
 h1,
 p.dek {
   text-align: center;
   max-width: initial;
 }
 
+.dek {
+  font-family: 'Amatic SC', cursive;
+}
+
 .start {
   margin: -1rem;
   background: #111;
   color: #eee;
-  padding: 8em 0;
+  padding: 8em 1rem;
   position: relative;
+  clear: both;
 }
 
 .start:before {
@@ -31,52 +43,128 @@ p.dek {
 
 svg.gaza {
   display: block;
-  width: 100%;
+  width: 30%;
+  float: left;
   fill: none;
   stroke: #eee;
   stroke-width: 1;
 }
 
-.text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.text p.first {
-  margin-top: 3em;
-}
+
+html.has-shapes {
+
+  svg.gaza {
+    float: none;
+    width: 100%;
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 28px;
+  }
+
+  .text p.first {
+    margin-top: 1em;
+  }
+
+  @media (max-width: 500px) {
+    .text {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 600px) {
+    .text {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 700px) {
+    .text {
+      font-size: 24px;
+    }
+  }
 
 
-.shape-left,
-.shape-right {
-  display: block;
-  width: 50%;
-  height: 100%;
+  .shape-left,
+  .shape-right {
+    display: block;
+    width: 50%;
+    height: 100%;
+    shape-margin: 1em; 
+  }
+
+  .shape-left {
+    float: left;
+    shape-outside: polygon(58% 0,59% 17%,53% 27%,
+      49% 42%,31% 60%,27% 64%,23% 68%,10% 81%,
+      4% 85%,43% 89%,48% 88%,128% 99%,0 99%,0 0);
+  }
+
+  .shape-right {
+    float: right;
+    shape-outside: polygon(0 0,0 .8%,84% 2%,77% 8%,
+      81% 8%,77% 10%,66% 14%,52% 17%,45% 23%,
+      41% 26%,39% 27%,33% 36%,27% 38%,28% 41%,
+      21% 44%,20% 46%,15% 48%,15% 50%,16% 51%,
+      12% 53%,15% 55%,16% 57%,21% 61%,72% 71%,
+      79% 75%,64% 80%,64% 86%,43% 93%,42% 97%,
+      28% 100%,100% 100%,100% 0);
+  }
 }
 
-.shape-left {
-  float: left;
-  shape-margin: .5em; 
-  shape-outside: polygon(58% 0,59% 17%,53% 27%,
-    49% 42%,31% 60%,27% 64%,23% 68%,10% 81%,
-    4% 85%,43% 89%,48% 88%,128% 99%,0 99%,0 0);
-  height: 100%;
+[x-cp-video] {
+  margin-bottom: 0;
+}
+
+figcaption {
+  font-family: 'Khand', sans-serif;
+}
+
+.subhed {
+  margin-top: 2em;
+  font-weight: 700;
+  // font-family: 'Amatic SC', cursive;
+  // font-size: 3em;
+}
+
+.green-background {
+  background: hsla(149, 60%, 40% ,1);
+  padding: 2em;
+}
+
+.social {
   width: 100%;
-
-
+  max-width: initial;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 1em;
+  background: crimson;
+  z-index: 1;
+  line-height: 1;
 }
 
-.shape-right {
-  shape-margin: .5em; 
-  float: right;
-  shape-outside: polygon(0 0,0 .8%,84% 2%,77% 8%,
-    81% 8%,77% 10%,66% 14%,52% 17%,45% 23%,
-    41% 26%,39% 27%,33% 36%,27% 38%,28% 41%,
-    21% 44%,20% 46%,15% 48%,15% 50%,16% 51%,
-    12% 53%,15% 55%,16% 57%,21% 61%,72% 71%,
-    79% 75%,64% 80%,64% 86%,43% 93%,42% 97%,
-    28% 100%,100% 100%,100% 0);
+.social a,
+span.donate {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1em;
+  color: white;
+  border: none;
 }
+
+.donate-deux-parent {
+  text-align: center;
+}
+
+.donate-deux {
+  padding: 1em;
+}
+
 
