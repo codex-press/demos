@@ -1,41 +1,55 @@
-
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Khand|Oxygen:400,700');
 
 body {
-  font-family: 'Oxygen', sans-serif;  
+  font-family: 'Oxygen', sans-serif;
+  background-color: white;
   padding-bottom: 0;
+  font-size: 16px;
 }
 
-h1,
-p.dek {
+h1 {
+  font-size: 6em;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.dek {
+  font-size: 3em;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   max-width: initial;
 }
 
-.dek {
-  font-family: 'Amatic SC', cursive;
+.skyline {
+  min-height: 90vh;
+  margin: 0 -1rem;
 }
 
-.start {
-  margin: -1rem;
+.full-window {
+  height: 100vh;
+  margin: 0 -1rem;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  margin: 0 -1rem;
+  padding-top: 8em;
   background: #111;
   color: #eee;
-  padding: 8em 1rem;
-  position: relative;
-  clear: both;
 }
 
-.start:before {
+.background:before {
   display: block;
   content: '';
   position: absolute;
-  width: 100%;
   height: 10em;
+  width: 100%;
   bottom: 100%;
   background: linear-gradient(hsla(0, 0%, 100%, 0), #111);
 }
 
-.wrapper {
+.map {
   position: relative;;
   max-width: 700px;
   margin: 0 auto;
@@ -48,8 +62,8 @@ svg.gaza {
   fill: none;
   stroke: #eee;
   stroke-width: 1;
+  margin-bottom: 8rem;
 }
-
 
 html.has-shapes {
 
@@ -67,11 +81,21 @@ html.has-shapes {
     font-size: 28px;
   }
 
+  .text p {
+    max-width: initial;
+  }
+
   .text p.first {
     margin-top: 1em;
   }
+  
+  @media (max-width: 400px) {
+    .text {
+      font-size: 14px;
+    }
+  }
 
-  @media (max-width: 500px) {
+  @media (min-width: 400px) and (max-width: 500px) {
     .text {
       font-size: 16px;
     }
@@ -88,7 +112,6 @@ html.has-shapes {
       font-size: 24px;
     }
   }
-
 
   .shape-left,
   .shape-right {
@@ -118,23 +141,35 @@ html.has-shapes {
 }
 
 [x-cp-video] {
-  margin-bottom: 0;
+  clear: both;
+  max-height: 100vh;
+  margin: auto 0;
+  background: #111;
 }
 
 figcaption {
   font-family: 'Khand', sans-serif;
 }
 
+p, h4, .text-width {
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
+
 .subhed {
   margin-top: 2em;
   font-weight: 700;
-  // font-family: 'Amatic SC', cursive;
-  // font-size: 3em;
 }
 
 .green-background {
   background: hsla(149, 60%, 40% ,1);
-  padding: 2em;
+  padding: 1rem;
+  margin: 0 -1rem;
 }
 
 .social {
@@ -143,11 +178,15 @@ figcaption {
   text-align: center;
   position: sticky;
   top: 0;
-  margin: 0;
+  margin: 0 -1rem;
   padding: 1em;
   background: crimson;
   z-index: 1;
   line-height: 1;
+}
+
+.social svg {
+  vertical-align: bottom;
 }
 
 .social a,
@@ -157,14 +196,31 @@ span.donate {
   line-height: 1em;
   color: white;
   border: none;
+  margin: 0 0.5rem;
 }
 
-.donate-deux-parent {
-  text-align: center;
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -1rem;
 }
+
+.row > div {
+  flex: 1 1 400px;
+  margin: 1rem;
+}
+
 
 .donate-deux {
-  padding: 1em;
+  text-align: center;
+  padding: 2rem;
 }
 
+.donate-deux a {
+  padding: 0.7em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  background: crimson;
+  color: white;
+}
 
