@@ -1,7 +1,5 @@
 
 let doc = document.documentElement;
-let div = document.createElement('div');
-div.style.shapeOutside = 'content-box';
-if (div.style.shapeOutside === 'content-box')
+if ('shape-outside' in doc.style)
   doc.className = doc.className + ' has-shapes';
 
