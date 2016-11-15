@@ -1,14 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Trirong|Architects+Daughter|Cormorant|Cormorant+Unicase|Dancing+Script|Eczar|Merienda+One|Raleway|Rye|Satisfy|Vast+Shadow';
-@import 'https://fonts.googleapis.com/css?family=Allura';
-@import 'https://fonts.googleapis.com/css?family=Bad+Script|Kalam';
+@import 'https://fonts.googleapis.com/css?family=Trirong|Architects+Daughter|Cormorant|Dancing+Script|Eczar|Raleway|Rye|Satisfy|Vast+Shadow|Allura|Bad+Script';
 
 @decor: "catseye", "fairy-tale-jf", sans-serif;
 @sans: "stevie-sans", Helvetica, Arial, sans-serif; 
 @serif: "adobe-text-pro", "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
-
-* {
-  box-sizing: border-box;
-}
 
 @media (max-width: 1129px) {
   html {
@@ -23,7 +17,6 @@
 }
 
 
- 
 body {
   color: #002;
   background: #fffaef;
@@ -48,8 +41,6 @@ p {
   margin: auto;
   padding-bottom: 1em;
 }
-
-
 
 .drop-cap {
   float: left;
@@ -100,7 +91,7 @@ p {
 }
 
 figcaption {
-  font-family: 'Bad Script', 'Kalam', cursive;
+  font-family: 'Bad Script', serif;
   font-size: 1.5em;
   line-height: 1.2;
   color: grey;
@@ -125,8 +116,8 @@ figcaption {
   }
 }
 
-@import 'alice/toc.less';
-@import 'alice/1.less';
+@import 'toc.less';
+@import 'chapter_1.less';
  
 /* images figure  */
 
@@ -151,7 +142,7 @@ article.chapter-two {
   }
 }
 
-@import 'alice/3.less';
+@import 'chapter_3.less';
 
 article.chapter-four {
 
@@ -189,7 +180,7 @@ article.chapter-five {
 }
 
 
-@import 'alice/6.less';
+@import 'chapter_6.less';
 
 article.chapter-seven  {
   .hatter-song {
@@ -285,18 +276,18 @@ article.chapter-eleven {
 article.chapter-twelve { 
   .the-end {
     font-family: "fairy-tale-jf";
-    font-size:3em;
+    font-size: 3em;
     text-align: center;
     margin: 2em auto;
-    }
-    .white-rabbit-poem{
+  }
+  .white-rabbit-poem{
     font-family: "Architects Daughter";
-    line-height:.5;
-       padding-left: 2em;
-    }
-    .white-rabbit-poem p:nth-child(2n){
-     padding-bottom: 2em;
-    }
+    line-height: 0.5;
+    padding-left: 2em;
+  }
+  .white-rabbit-poem p:nth-child(2n){
+    padding-bottom: 2em;
+  }
 }
 
 
