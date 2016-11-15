@@ -33,9 +33,9 @@ h1 {
 
 .background {
   position: relative;
-  margin: 0 -1rem;
   padding-top: 8em;
   background: #111;
+  margin: 0 -1rem;
   color: #eee;
 }
 
@@ -53,6 +53,14 @@ h1 {
   position: relative;;
   max-width: 700px;
   margin: 0 auto;
+  margin-bottom: 8rem;
+  padding: 0 1rem;
+}
+
+.map:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 svg.gaza {
@@ -62,7 +70,6 @@ svg.gaza {
   fill: none;
   stroke: #eee;
   stroke-width: 1;
-  margin-bottom: 8rem;
 }
 
 html.has-shapes {
@@ -95,7 +102,7 @@ html.has-shapes {
     }
   }
 
-  @media (min-width: 400px) and (max-width: 500px) {
+  @media (min-width: 401px) and (max-width: 500px) {
     .text {
       font-size: 16px;
     }
@@ -118,7 +125,7 @@ html.has-shapes {
     display: block;
     width: 50%;
     height: 100%;
-    shape-margin: 1em; 
+    shape-margin: 1.3em; 
   }
 
   .shape-left {
@@ -141,7 +148,6 @@ html.has-shapes {
 }
 
 [x-cp-video] {
-  clear: both;
   max-height: 100vh;
   margin: auto 0;
   background: #111;
