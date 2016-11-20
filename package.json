@@ -1,0 +1,22 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"https://codex.press/docs/fleurons\">     <img src=\"https://cdn.rawgit.com/codex-press/demos/a84464c40ae441307c0d1b8da0541f711b390886/hatter.svg\" width=200>    </a> </p> <h1 align=center>Codex Demos</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codex-press/demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codex-press/demos/issues"
+  },
+  "homepage": "https://github.com/codex-press/demos#readme",
+  "dependencies": {
+    "three": "^0.82.1"
+  }
+}
