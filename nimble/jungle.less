@@ -1,25 +1,46 @@
 
-.double-rainbow [x-cp-overlay] {
-  margin: 20px;
-  font-family: "Bodoni MT",Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;
-  font-style: italic;
-  text-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+.scroll-overlay p {
+  max-width: 18em;
+  margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
+  text-indent: 1.5em;
+  line-height: 1.2;
 }
 
-.scroll-block {
-  overflow: hidden;
+.scroll-overlay p:first-child {
+  margin-top: 6em;
 }
+
+.scroll-overlay p:first-child.dear {
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+.scroll-overlay [x-cp-overlay] {
+  margin: 2em;
+  padding-top: 3em;
+}
+
+
+
 
 .full-window {
   margin: 0 -1rem;  
 }
 
-canvas {
+
+.rainbow {
+  position: relative;
+}
+
+.rainbow canvas {
   opacity: 0;
   transition: opacity 0.5s linear;
 }
 
-canvas.loaded {
+.rainbow canvas.loaded {
   opacity: 1;
 }
 

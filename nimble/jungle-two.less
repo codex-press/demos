@@ -1,0 +1,126 @@
+
+body {
+  padding-bottom: 0;
+}
+
+// NIGHT SECTION
+section.one {
+  
+  & {
+    background: black;
+    color: white;
+    margin: 0 -1em 0;
+  }
+
+  .full-window {
+    margin: 0;
+  }
+
+  h1 p {
+    font-size: 1em;
+    text-align: right;
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.3em;
+  }
+
+  .page {
+    min-height: 100vh;
+  }
+
+  .page figure {
+    margin: 0;
+  }
+
+  .spidey     + .flow-target,
+  .frond      + .flow-target,
+  .bendy-tree + .flow-target {
+    height: 100vh;
+  }
+
+  .spidey + .flow-target {
+    padding-top: 3em;
+    font-size: 1.2em;
+  }
+  .spidey + .flow-target p {
+    margin-left: 1em;
+  }
+
+  .root-snakes {
+    width: 100%;
+    columns: 18em;
+  }
+
+  figure.spidey,
+  figure.frond {
+    float: right;
+    clear: both;
+    width: 100%;
+    max-width: initial;
+  }
+
+  figure.spidey {
+    shape-margin: 1em;
+    shape-outside: polygon(82% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+
+  figure.bendy-tree {
+    width: 100%;
+    max-width: initial;
+    margin-left: 0;
+    float: left;
+    clear: both;
+    shape-margin: 2em;
+    shape-outside: polygon(0 0, 10% 0, 50% 100%, 0 100%);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+.full-width {
+  width: 100%;
+}
+
+.full-window {
+  margin: 0 -1rem;  
+  height: 100vh;
+}
+
+.frame [x-cp-overlay] {
+  color: white;
+}
+
+p {
+  max-width: 18em;
+  margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
+  text-indent: 1.5em;
+  line-height: 1.2;
+}
+
+.scroll-overlay p:first-child {
+  margin-top: 6em;
+}
+
+.scroll-overlay p:first-child.dear {
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+.scroll-overlay [x-cp-overlay] {
+  margin: 2em;
+  padding-top: 3em;
+}
+

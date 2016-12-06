@@ -5,6 +5,7 @@ import animate from 'animate';
 
 import * as THREE from 'three';
 
+
 let url = 'https://usercontent.codex.press/images/5e257fe7-6f08-42bc-bb91-37f61c3e8012/original.jpg';
 
 let camera, scene, renderer;
@@ -35,7 +36,7 @@ article.register('.rainbow', class Rainbow extends Plugin {
 
     let texture = new THREE.TextureLoader().load(url, texture => {
       dom(renderer.domElement).addClass('loaded');
-      this.update();
+      this._update();
     });
 
     let material = new THREE.MeshBasicMaterial({map: texture});
@@ -66,7 +67,7 @@ article.register('.rainbow', class Rainbow extends Plugin {
       lon = easeLon(time);
       camera.fov = easeFov(time);
       camera.updateProjectionMatrix();
-      this.update();
+      this._update();
     };
 
     this.tween = animate({duration, tick});
@@ -77,7 +78,7 @@ article.register('.rainbow', class Rainbow extends Plugin {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    this.update();
+    this._update();
   }
 
 
@@ -100,7 +101,7 @@ article.register('.rainbow', class Rainbow extends Plugin {
     if ( isUserInteracting === true ) {
       lon = ( onPointerDownPointerX - event.clientX ) * 0.1 + onPointerDownLon;
       lat = ( event.clientY - onPointerDownPointerY ) * 0.1 + onPointerDownLat;
-      this.update();
+      this._update();
     }
   }
 
@@ -116,12 +117,12 @@ article.register('.rainbow', class Rainbow extends Plugin {
   //   camera.fov += event.deltaY * 0.05;
   //   console.log(camera.fov);
   //   camera.updateProjectionMatrix();
-  //   this.update();
+  //   this._update();
   //   e.preventDefault();
   // }
 
 
-  update() {
+  _update() {
     lat = Math.max(-85, Math.min(85, lat));
 
     // console.log(camera.fov, lat, lon);
@@ -140,15 +141,5 @@ article.register('.rainbow', class Rainbow extends Plugin {
 
 });
 
-
-
-article.register('.scroll-block', class ScrollBlock extends Plugin {
-
-  constructor(args) {
-    super(args);
-    console.log(this);
-  }
-
-});
 
 
