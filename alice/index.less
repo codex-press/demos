@@ -18,12 +18,35 @@
 
 
 body {
-  color: #002;
-  background: #fffaef;
+  color: #222;
+  background: hsl(41, 100%, 97%);
   font-family: "ff-more-web-pro", @serif;
   line-height: 1.6; 
-  padding: 0 0 6rem;
+  padding: 4rem 0 6rem;
 }
+
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid hsl(41, 100%, 37%);
+  text-align: center;
+  padding: 1rem;
+  background: hsl(41, 100%, 97%);
+  z-index: 1;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 1rem;
+  color: hsl(41, 100%, 17%);
+}
+
+nav a:hover {
+  color: hsl(41, 100%, 27%);
+}
+
 
 h1 {
   text-align: center;
