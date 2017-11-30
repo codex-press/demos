@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://codex.press/docs/fleurons">
-    <img src="https://usercontent.codex.press/demos/hatter.svg" width=200>
+    <img src="https://usercontent.codex.press/demos/alice/hatter.svg" width=200>
   </a>
 </p>
 <h1 align=center>Codex Demos</h1>
