@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://codex.press/docs/fleurons">
-    <img src="https://cdn.rawgit.com/codex-press/demos/a84464c40ae441307c0d1b8da0541f711b390886/hatter.svg" width=200>
-   </a>
+    <img src="https://usercontent.codex.press/demos/hatter.svg" width=200>
+  </a>
 </p>
 <h1 align=center>Codex Demos</h1>
 
