@@ -1,13 +1,13 @@
-import {typekit} from 'utility';
+import { typekit } from '/app/src/utility.js';
 
-typekit({kitId: 'ndg1ffp'});
+typekit({ kitId: 'ndg1ffp' });
 
-
-import article from 'article';
-import Plugin from 'plugin';
-import dom from 'dom';
+import { article, dom } from '/app/index.js';
+import Plugin from '/app/src/plugin.js';
 
 let fall = 300;
+
+
 
 article.register('.rabbit-hole', class RabbitHole extends Plugin {
 
@@ -39,6 +39,7 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
       z -= fall;
       return levels;
     },[]);
+
   }
 
 
@@ -51,12 +52,12 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
       this.resize();
 
     let perspective = Math.round(-rect.top + window.innerHeight * .7);
-    this.css({perspectiveOrigin: `center ${perspective}px`});
+    this.css({ perspectiveOrigin: `center ${perspective}px` });
 
     // So the hard thing here is there are levels of flat and in between 
     // parts where it's just falling straight down. In order to find where
     // to tween, finds the start level and the end level.
-    let level1 = this.levels.find(({z, top, bottom}, i) => {
+    let level1 = this.levels.find(({ z, top, bottom }, i) => {
       return (
         // at end of array
         i+1 >= this.levels.length ||
@@ -65,7 +66,7 @@ article.register('.rabbit-hole', class RabbitHole extends Plugin {
       );
     });
 
-    let level2 = this.levels.find(({z, top, bottom}) => {
+    let level2 = this.levels.find(({ z, top, bottom }) => {
       // the bottom of this one is below the midpoint
       return rect.top + bottom > window.innerHeight / 2;
     });
